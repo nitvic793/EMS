@@ -1,0 +1,35 @@
+
+{% extends 'layout.html' %}
+ 
+{% block content %} 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns">
+		<br>
+		<h3>Chapters </h3>
+		<hr>
+          <table>
+		<thead>
+		<tr>
+      <th width="200">Name</th>
+      <th width="150">Venue</th>
+      <th width="150">Date</th>
+	  <th >Chapter/Club</th>
+		</tr>
+		</thead>
+		{% for event in events %}
+		<tr>
+		<td>{{event.ename}}</td>
+		<td>{{event.venue}}</td>
+		<td>{{event.date}}</td>
+		<td>{{event.organisation}}</td>
+		</tr>
+		{% endfor %}
+		</table>
+         </div>
+ 
+    <!-- End Thumbnails -->
+ 
+ 
+    {% endblock %}

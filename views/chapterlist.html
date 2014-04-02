@@ -1,0 +1,33 @@
+
+{% extends 'layout.html' %}
+ 
+{% block content %} 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns">
+		<br>
+		<h3>Chapters </h3>
+		<hr>
+          <table>
+		<thead>
+		<tr>
+      <th width="200">Chapter</th>
+      <th width="150">Code</th>
+      <th width="150">School</th>
+		</tr>
+		</thead>
+		{% for chapter in chapters %}
+		<tr>
+		<td>{{chapter.name}}</td>
+		<td>{{chapter.code}}</td>
+		<td>{{chapter.school}}</td>
+		</tr>
+		{% endfor %}
+		</table>
+         </div>
+ 
+    <!-- End Thumbnails -->
+ 
+ 
+    {% endblock %}

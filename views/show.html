@@ -1,0 +1,52 @@
+
+{% extends 'layout.html' %}
+ 
+{% block content %} 
+ 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns"><br>
+		<h2>Event Details</h2><hr>
+		<div class="row">
+          <div class="large-6 medium-6 columns">
+		  <h5>Event Name</h5>
+            <div class="callout panel">
+              <p>{{event.ename}}</p>
+            </div>
+          </div>
+          <div class="large-6 medium-6 columns">
+		  <h5>Venue</h5>
+            <div class="callout panel">
+              <p>{{event.venue}}</p>
+            </div>
+          </div>
+        </div>
+		<h5>Description</h5>
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="callout panel">
+              <p>{{event.description}}</p>
+            </div>
+          </div>
+        </div>
+		<div class="row">
+          <div class="large-6 medium-6 columns">
+		  <h5>Date</h5>
+            <div class="callout panel">
+              <p>{{event.date}}</p>
+            </div>
+          </div>
+          <div class="large-6 medium-6 columns">
+		  <h5>Organisation</h5>
+            <div class="callout panel">
+              <p>{{event.organisation}}</p>
+            </div>
+          </div>
+        </div>
+         </div>
+ 
+    <!-- End Thumbnails -->
+ 
+ {% endblock %}
+    

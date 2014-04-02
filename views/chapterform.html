@@ -1,0 +1,51 @@
+
+{% extends 'layout.html' %}
+ 
+{% block content %} 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns">
+		<br>
+		<h3> Add Chapter </h3>
+		<hr>
+          <form method="post"  action="chapter/register">
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Name</label>
+				      <input name= "name" type="text" placeholder="Name of the chapter/club" />
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Code</label>
+				      <input name= "code" type="text" placeholder="Code of chapter club(Like CSI,IEEE, ACM etc.)" />
+				    </div>
+				  </div>
+				   <div class="row">
+				    <div class="large-12 columns">
+				      <label>Under School</label>
+				      <input name= "school" type="text" placeholder="School under which the chapter/club works. SCSE, SITE etc." />
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-6 medium-6 columns">
+				      <label>Type</label>
+				      <input type="radio" name="type" value="Club" id="pokemonRed"><label for="pokemonRed">Club</label>
+				      <input type="radio" name="type" value="Chapter" id="pokemonBlue"><label for="pokemonBlue">Chapter</label>
+				    </div>
+				    
+				  </div>
+				  
+				  <div class="row">
+					<div class="large-4 medium-4 columns">
+				      <input type="submit" value="Register" class="small radius button" />
+					</div>
+				  </div>
+		 </form>		  
+         </div>
+ 
+    <!-- End Thumbnails -->
+ 
+ 
+    {% endblock %}

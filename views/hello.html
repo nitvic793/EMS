@@ -1,0 +1,12 @@
+<html>
+<body>
+<h1>Hello | {{ title }}</h1>
+<ul>{{ msg }}
+{% for author in authors %}
+  <li{% if loop.first %} class="first"{% endif %}>
+    {{ author }}
+  </li>
+{% endfor %}
+</ul>
+</body>
+</html>

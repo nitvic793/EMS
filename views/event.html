@@ -1,0 +1,64 @@
+
+{% extends 'layout.html' %}
+ 
+{% block content %} 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns">
+		<br>
+		<h3> Add an event </h3>
+		<hr>
+          <form method="post"  action="event/add" enctype="multipart/form-data">
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Event Name :</label>
+				      <input name= "ename" type="text" placeholder="Name your event!" />
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Venue:</label>
+				      <input name= "venue" type="text" placeholder="Keep it somewhere nearby, please?" />
+				    </div>
+				  </div>
+				   <div class="row">
+				    <div class="large-12 columns">
+				      <label>Description</label>
+				      <textarea placeholder="Describe your event!" name="description"></textarea>
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Logo/Poster Upload</label>
+				      <input type="file" name="logofile">
+				    </div>
+				  </div>
+				  <div class="row">
+					<div class="large-4 medium-4 columns">
+				      <label>Date</label>
+				      <input type="date" name="date" placeholder="large-4.columns" />
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Organised by :</label>
+				      <select name="organisation">
+					  {% for chapter in chapters %}
+				        <option value="{{chapter.code}}">{{chapter.name}}({{chapter.code}})</option>
+						{% endfor %}	
+				      </select>
+				    </div>
+				  </div>
+				  <div class="row">
+					<div class="large-4 medium-4 columns">
+				      <input type="submit" class="small radius button" />
+					</div>
+				  </div>
+		 </form>		  
+         </div>
+ 
+    <!-- End Thumbnails -->
+ 
+ 
+    {% endblock %}
